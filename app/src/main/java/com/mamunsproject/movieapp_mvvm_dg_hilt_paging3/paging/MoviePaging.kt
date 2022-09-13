@@ -1,16 +1,14 @@
 package com.mamunsproject.movieapp_mvvm_dg_hilt_paging3.paging
 
 import androidx.paging.PagingSource
-import androidx.paging.PagingState
-import com.mamunsproject.movieapp_mvvm_dg_hilt_paging3.data.Movies
+import com.mamunsproject.movieapp_mvvm_dg_hilt_paging3.data.Movie
 import com.mamunsproject.movieapp_mvvm_dg_hilt_paging3.remote.MovieInterface
 import com.mamunsproject.movieapp_mvvm_dg_hilt_paging3.utils.Constants
 
 class MoviePaging(val search: String, val movieInterface: MovieInterface) :
-    PagingSource<Int, Movies>() {
+    PagingSource<Int, Movie>() {
 
-
-    override suspend fun load(params: LoadParams<Int>): LoadResult<Int, Movies> {
+    override suspend fun load(params: LoadParams<Int>): LoadResult<Int, Movie> {
 
         val page = params.key ?: 1
 

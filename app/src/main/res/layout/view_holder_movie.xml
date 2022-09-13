@@ -5,7 +5,8 @@
 
     <data>
 
-        <import type="gaur.himanshu.august.moviedetails.data.Movie" />
+
+        <import type="com.mamunsproject.movieapp_mvvm_dg_hilt_paging3.data.Movie" />
 
         <variable
             name="movie"
@@ -13,7 +14,7 @@
 
     </data>
 
-    <com.google.android.material.card.MaterialCardView
+    <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="4dp"
@@ -42,11 +43,11 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/movie_image"
-                android:layout_marginStart="4dp"
                 android:layout_centerHorizontal="true"
+                android:layout_marginStart="4dp"
                 android:layout_marginEnd="4dp"
-                android:text="@{movie.title}"
                 android:gravity="center_horizontal"
+                android:text="@{movie.title}"
 
                 android:textSize="16dp"
                 android:textStyle="bold"
@@ -58,9 +59,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/movie_title"
+                android:layout_centerHorizontal="true"
                 android:layout_marginStart="4dp"
                 android:layout_marginEnd="4dp"
-                android:layout_centerHorizontal="true"
                 android:layout_marginBottom="8dp"
                 android:text="@{`Year :` + movie.year}"
                 android:textSize="14dp"
@@ -69,4 +70,6 @@
         </RelativeLayout>
 
 
-    </com.google.android.material
+    </androidx.cardview.widget.CardView>
+
+</layout>

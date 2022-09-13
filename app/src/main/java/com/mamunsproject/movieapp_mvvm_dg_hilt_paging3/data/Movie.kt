@@ -1,6 +1,6 @@
 package com.mamunsproject.movieapp_mvvm_dg_hilt_paging3.data
 
-data class Movies(
+data class Movie(
     val Poster: String,
     val Title: String,
     val Type: String,
